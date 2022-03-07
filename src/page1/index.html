@@ -2,85 +2,70 @@
 <html lang="en">
 <head>
 <style>
-  
   body {
+    margin:0px;
+    padding:0px;
     font-family:"futura";
-    margin-top: 0px;
-    height: 100%;
-    width: 100%;
+    margin-top:10px;
+    height:100%;
+    width:100%;
     background-color: #555;
-  }
+}
 
-  /* Navbar styling for the placeholder navbar only. Can be removed along with the placeholder. */
-  .navbar {
-    background-color: #222;
-    width: 100%;
-    padding: 10px;
-  }
-
-  .grid-1 {
+  .grid {
     display: grid;
-    grid-template-columns: 17% 60% 17%;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "cameras map current_visualization"
-                        "cameras sat_image current_visualization";
-    grid-gap: 1em;
-    justify-content: center;
-    margin-top: 10px;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-rows: 25% 25% 75%;
+    grid-template-areas: "blank date_start date_end"
+                        "camera_list main_space main_space"
+                        "camera_map main_space main_space";
+    grid-gap: 1em;    
+}
+
+  .main_space {
+      grid-area: main_space;
   }
 
-  .cameras, .map, .current_visualization, .sat_image {
+  .date_start, .date_end, .camera_list, .camera_map, .main_space {
     border-style: solid;
     padding: 1em;
     display: flex;
   }
-
-  .cameras {
-    grid-area: cameras;
-    justify-content: center;
+  .blank {
+    grid-area: blank;
+    padding: 1em;
+    display: flex;
   }
-
-  .map {
-    grid-area: map;
-    justify-content: center;
+  .date_start {
+    grid-area: date_start;
+    align-items: center;
   }
-
-  .current_visualization {
-    grid-area: current_visualization;
-    justify-content: center;
+  .date_end {
+    grid-area: date_end;
+    align-items: center;
   }
-
-  .sat_image {
-    grid-area: sat_image;
-    justify-content: center;
+  .camera_list {
+    grid-area: camera_list;
+    align-items: center;
+  }
+  .camera_map {
+    grid-area: camera_map;
   }
 
 </style>
 </head>
 <body>
-  <!-- Navbar component placeholder. Should be replaced by actual navbar component. -->
-  <div class="navbar">
-    Navbar demo
-  </div>
-
-  <!-- Grid structure -->
-  <div class="grid-1">
-    <div class="cameras">
-      Cameras
-      <!-- Dropdown component and list of cameras (plus whatever other components for this section) -->
-    </div>
-    <div class="map">
-      Map
-      <!-- Map component will go here -->
-    </div>
-    <div class="current_visualization">
-      Current Visualization
-      <!-- Visualization components go here -->
-    </div>
-    <div class="sat_image">
-      <!-- Currently using satel.jpg as the satelite image for demonstration-->
-      <img src="satel.jpg" alt="Sat Image" style="width:260px;height:200px;">
-    </div>
-  </div>
+    <div class="grid">
+        <div class="blank"></div>
+        <div class="date_start">Date Start:</div>
+        <div class="date_end">Date End:</div>
+        <div class="camera_list">Camera List</div>
+        <div class="main_space">
+			<!-- Place holder for the main space -->		
+			<img src="logo512.png" style="height:200px;width:200px">
+		</div>
+        
+		<div class="camera_map">Camera Map</div>
+    </div-1>
 </body>
 </html>
