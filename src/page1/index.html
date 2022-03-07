@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"> -->
+<style>
+  body {
+    margin:0px;
+    padding:0px;
+    font-family:"futura";
+    margin-top:10px;
+    height:100%;
+    width:100%;
+    background-color: #555;
+}
+
+  .grid-1 {
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-rows: 25% 25% 75%;
+    grid-template-areas: "blank date_start date_end"
+                        "camera_list main_space main_space"
+                        "camera_map main_space main_space";
+    grid-gap: 1em;    
+}
+
+  .main_space {
+      grid-area: main_space;
+  }
+
+  .date_start, .date_end, .camera_list, .camera_map, .main_space {
+    border-style: solid;
+    padding: 1em;
+    display: flex;
+  }
+  .blank {
+    grid-area: blank;
+    padding: 1em;
+    display: flex;
+  }
+  .date_start {
+    grid-area: date_start;
+    align-items: center;
+  }
+  .date_end {
+    grid-area: date_end;
+    align-items: center;
+  }
+  .camera_list {
+    grid-area: camera_list;
+    align-items: center;
+  }
+  .camera_map {
+    grid-area: camera_map;
+    align-items: center;
+  }
+
+</style>
+</head>
+<body>
+    <div class="grid-1">
+        <div class="blank"></div>
+        <div class="date_start">Date Start:</div>
+        <div class="date_end">Date End:</div>
+        <div class="camera_list">Camera List</div>
+        <div class="main_space"><img src="logo512.png" style="height:200px;width:200px"></div>
+        <div class="camera_map">Camera Map</div>
+    </div-1>
+</body>
+</html>
